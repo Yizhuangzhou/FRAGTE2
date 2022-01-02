@@ -1,0 +1,114 @@
+#!/bin/bash
+
+m=$(perl -MFindBin -e 1 2>&1)
+rc=$?
+if [[ $rc != 0 ]]
+then
+	echo "Installing Perl module FindBin"
+	perl -MCPAN -e 'install FindBin'
+fi
+
+n=$(perl -MFile::Basename -e 1 2>&1)
+rc=$?
+if [[ $rc != 0 ]]
+then
+	echo "Installing Perl module File::Basename"
+	perl -MCPAN -e 'install File::Basename'
+fi
+
+l=$(perl -MPOSIX -e 1 2>&1)
+rc=$?
+if [[ $rc != 0 ]]
+then
+	echo "Installing Perl module POSIX"
+	perl -MCPAN -e 'install POSIX'
+fi
+
+t=$(perl -MTime::Local -e 1 2>&1)
+rc=$?
+if [[ $rc != 0 ]]
+then
+	echo "Installing Perl module Time::Local"
+	perl -MCPAN -e 'install Time::Local'
+fi
+
+c=$(perl -MCwd -e 1 2>&1)
+rc=$?
+if [[ $rc != 0 ]]
+then
+	echo "Installing Perl module Cwd"
+	perl -MCPAN -e 'install Cwd'
+fi
+
+g=$(perl -MGetopt::Long -e 1 2>&1)
+rc=$?
+if [[ $rc != 0 ]]
+then
+	echo "Installing Perl module Getopt::Long"
+	perl -MCPAN -e 'install Getopt::Long'
+fi
+
+s=$(perl -MStatistics::R -e 1 2>&1)
+rc=$?
+if [[ $rc != 0 ]]
+then
+	echo "Installing Perl module Statistics::R"
+	perl -MCPAN -e 'install Statistics::R'
+fi
+
+m=$(perl -MFindBin -e 1 2>&1)
+rc1=$?
+
+n=$(perl -MFile::Basename -e 1 2>&1)
+rc2=$?
+
+l=$(perl -MPOSIX -e 1 2>&1)
+rc3=$?
+
+t=$(perl -MTime::Local -e 1 2>&1)
+rc4=$?
+
+c=$(perl -MCwd -e 1 2>&1)
+rc5=$?
+
+g=$(perl -MGetopt::Long -e 1 2>&1)
+rc6=$?
+
+s=$(perl -MStatistics::R -e 1 2>&1)
+rc7=$?
+
+if [[ $rc1 != 0 ]] || [[ $rc2 != 0 ]] || [[ $rc3 != 0 ]] || [[ $rc4 != 0 ]] || [[ $rc5 != 0 ]] || [[ $rc6 != 0 ]] || [[ $rc7 != 0 ]]
+then
+	echo ""
+	echo "=========================================="
+	echo "Perl modules not installed successfully. Please make sure that Perl and CPAN are available on your system."
+	echo "---"
+	if [[ $rc1 != 0 ]]
+	then
+		echo "Perl Module FindBin not installed successfully."
+	fi
+	if [[ $rc2 != 0 ]]
+	then
+		echo "Perl Module File::Basename not installed successfully."
+	fi
+	if [[ $rc3 != 0 ]]
+	then
+		echo "Perl POSIX not installed successfully."
+	fi
+	if [[ $rc4 != 0 ]]
+	then
+		echo "Perl Module Time::Local not installed successfully."
+	fi
+	if [[ $rc5 != 0 ]]
+	then
+		echo "Perl Module Cwd not installed successfully."
+	fi
+	if [[ $rc6 != 0 ]]
+	then
+		echo "Perl Module Getopt::Long not installed successfully."
+	fi
+	if [[ $rc7 != 0 ]]
+	then
+		echo "Perl Module Statistics::R not installed successfully."
+	fi
+fi
