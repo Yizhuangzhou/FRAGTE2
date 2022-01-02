@@ -36,10 +36,17 @@ For FRAGTE1, please refer to https://github.com/Yizhuangzhou/FRAGTE.
 # Usage
 1. Link genomes
 
-perl Scripts/Linking_Genome.pl [GenomeInfo][outdir][output]
+perl Scripts/Linking_Genome.pl [GenomeInfo][outdir][output][len]
+
 [GenomeInfo] has 7 fields separatted by Tab, including:
-Assembly_accession,species_taxid,organism_name,strain_name,assembly_level,total genome size (in bp)
-  and file for genome
+Assembly_accession,species_taxid,organism_name,strain_name,assembly_level,total genome size (in bp) and file for genome
+  
+[outdir] the directory to save files for linked genomes
+
+[output] the output file containing information for each processed genome, including 7 fields separatted by Tab as follows:
+Assembly_accession,species_taxid,organism_name,Average Size,assembly_level,total genome size (in bp) and file for genome
+
+[len] the fragment length used for training for the Naïve Bayesian Classifier, generally 10000
   
 2. Run FRAGTE2
 
