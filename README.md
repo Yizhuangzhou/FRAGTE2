@@ -30,7 +30,7 @@ FRAGTE2 was developed in Perl language with embedded R programs. It just needs t
 ./autobuild_auxiliary
 
 # Description
-FRAGTE2 program is in bin directory; all tested data are in Data directory; other scripts are in Scripts directory.
+FRAGTE2 program is in bin directory; all tested data are in Data directory including assembly_accession, species_taxid and organism_name separatted by Tab; other scripts are in Scripts directory.
 For FRAGTE1, please refer to https://github.com/Yizhuangzhou/FRAGTE. 
 
 # Usage
