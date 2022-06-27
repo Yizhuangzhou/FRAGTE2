@@ -8,7 +8,8 @@ Zhou, Y., et al., A completeness-independent method for pre-selection of closely
  delineation in prokaryotes. BMC Genomics, 2020. 21(1): p. 183.
  
  If you use FRAGTE2 in your publication, please cite: 
- 
+Zeng, J., Wang, Y., Wu, Z. & Zhou, Y. FRAGTE2: An Enhanced Algorithm to Pre-Select Closely Related Genomes for Bacterial Species Demarcation. Frontiers in Microbiology 13, doi:10.3389/fmicb.2022.847439 (2022).
+
 # Version
 2.0
 
