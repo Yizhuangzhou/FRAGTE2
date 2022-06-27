@@ -59,7 +59,12 @@ Examples including:
  perl bin/FRAGTE2.pl --Qfile  <Qfile> --Rfile <Rfile> --QPrefix <Prefix> --RPrefix <Prefix>
   
  perl bin/FRAGTE2.pl --Qfile  <Qfile> --Rfile <Rfile> --QPrefix <Prefix> --RPrefix <Prefix> --Outdir <outdir> 
-
+ 
+ perl bin/FRAGTE2.pl --Afile  <Afile>
+ 
+ perl bin/FRAGTE2.pl --Afile  <Afile> --APrefix <Prefix>
+ 
+ perl bin/FRAGTE2.pl --Afile  <Afile> --APrefix <Prefix> --Outdir <outdir> 
 ## Note
 (1)The input file for "--Qfile" or "--Rfile" has 7 fields separatted by Tab, including: 
   Assembly_accession,species_taxid,organism_name,Average Size,assembly_level,total genome size (in bp)
